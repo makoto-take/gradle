@@ -10,5 +10,21 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Iteration " + i);
+            if (i % 2 == 0) {
+                System.out.println("Even number");
+            } else {   
+                System.out.println("Odd number");
+            }
+            if (i == 5) {
+                break;
+            }
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
